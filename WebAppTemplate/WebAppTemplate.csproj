@@ -164,9 +164,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Migrations\202505021932134_InitialCreate.cs" />
+    <Compile Include="Migrations\202505021932134_InitialCreate.Designer.cs">
+      <DependentUpon>202505021932134_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505060020582_PetInitialCreate.cs" />
+    <Compile Include="Migrations\202505060020582_PetInitialCreate.Designer.cs">
+      <DependentUpon>202505060020582_PetInitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\BookingModel.cs" />
+    <Compile Include="Models\FacilityModel.cs" />
+    <Compile Include="Models\PetModel.cs" />
+    <Compile Include="Models\PetOwnerModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Views\Admin\AdminController.cs" />
@@ -285,6 +300,14 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202505021932134_InitialCreate.resx">
+      <DependentUpon>202505021932134_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505060020582_PetInitialCreate.resx">
+      <DependentUpon>202505060020582_PetInitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
