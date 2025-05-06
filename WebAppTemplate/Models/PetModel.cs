@@ -17,6 +17,7 @@ namespace WebAppTemplate.Models
         public string Name { get; set; }
         [MaxLength(50)]
         public string Breed { get; set; }
+
         public int Age { get; set; }
         [MaxLength(100)]
         public string Vaccines { get; set; }

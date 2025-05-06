@@ -15,6 +15,7 @@ namespace WebAppTemplate.Models
         public string FacilityName { get; set; }
         [MaxLength(100)]
         public string Address { get; set; }
+
         public int MaxOccupancy { get; set; }
 
         public List<BookingModel> Bookings { get; set; }
