@@ -13,9 +13,9 @@ namespace WebAppTemplate.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Hours()
         {
-            ViewBag.Message = "The application description page.";
+            ViewBag.Message = "Hours";
 
             return View();
         }
