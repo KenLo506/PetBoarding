@@ -33,7 +33,7 @@ namespace WebAppTemplate.Models
 
         public EmployeeModel CheckInByEmployeeID { get; set; } 
 
-        public EmployeeModel CheckedOutByEmployeeID { get; set; }
+        public EmployeeModel CheckedOutByEmployeeID { get; set; } 
         [Required]
         public FacilityModel Facility { get; set; }
         [Required]
