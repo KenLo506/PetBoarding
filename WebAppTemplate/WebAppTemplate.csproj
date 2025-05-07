@@ -172,6 +172,14 @@
     <Compile Include="Migrations\202505060020582_PetInitialCreate.Designer.cs">
       <DependentUpon>202505060020582_PetInitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202505070004508_NameChange.cs" />
+    <Compile Include="Migrations\202505070004508_NameChange.Designer.cs">
+      <DependentUpon>202505070004508_NameChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202505070052419_simpleValidations.cs" />
+    <Compile Include="Migrations\202505070052419_simpleValidations.Designer.cs">
+      <DependentUpon>202505070052419_simpleValidations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BookingModel.cs" />
@@ -307,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202505060020582_PetInitialCreate.resx">
       <DependentUpon>202505060020582_PetInitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505070004508_NameChange.resx">
+      <DependentUpon>202505070004508_NameChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505070052419_simpleValidations.resx">
+      <DependentUpon>202505070052419_simpleValidations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

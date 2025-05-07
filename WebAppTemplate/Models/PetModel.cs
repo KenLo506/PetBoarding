@@ -11,18 +11,18 @@ namespace WebAppTemplate.Models
         [Key]
         public Guid PetID { get; set; }
         [Required]
-        public PetOwnerModel OwnerID { get; set; }
+        public PetOwnerModel Owner { get; set; }
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
-
+        [MaxLength(50)]
         public string Breed { get; set; }
-
         public int Age { get; set; }
-
+        [MaxLength(100)]
         public string Vaccines { get; set; }
-
+        [MaxLength(100)]
         public string Medications { get; set; }
-
+        [MaxLength(500)]
         public string ExtraNotes { get; set; }
 
         public List<BookingModel> Bookings { get; set; }
