@@ -19,12 +19,12 @@ namespace WebAppTemplate.Models
         [Key]
         public Guid BookingID { get; set; }
         [Required]
-        public PetModel PetID { get; set; }
-
+        public PetModel Pet { get; set; }
+        [MaxLength(1000)]
         public string PetInstructions { get; set; }
-
+        [Required]
         public DateTime BookingStartTime { get; set; }
-
+        [Required]
         public DateTime BookingEndTime { get; set; }
 
         public DateTime? ActualCheckInTime { get; set; }
@@ -33,14 +33,14 @@ namespace WebAppTemplate.Models
 
         public EmployeeModel CheckInByEmployeeID { get; set; } 
 
-        public EmployeeModel CheckedOutByEmployeeID { get; set; } 
-
-        public FacilityModel FacilityID { get; set; } 
-
+        public EmployeeModel CheckedOutByEmployeeID { get; set; }
+        [Required]
+        public FacilityModel Facility { get; set; }
+        [Required]
         public BookingStatus Status { get; set; }
-
+        [MaxLength(100)]
         public string FeedingSchedule { get; set; }
-
+        [MaxLength(100)]
         public string FoodAmount { get; set; }
 
         public BookingModel()

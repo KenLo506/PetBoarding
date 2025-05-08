@@ -36,5 +36,6 @@ namespace WebAppTemplate.Controllers
         {
             return Content("This is endpoint A");
         }
+
     }
 }
