@@ -24,8 +24,8 @@ namespace WebAppTemplate.Models
         public string Medications { get; set; }
         [MaxLength(500)]
         public string ExtraNotes { get; set; }
+        public virtual List<BookingModel> Bookings { get; set; }
 
-        public List<BookingModel> Bookings { get; set; }
         public PetModel()
         {
             PetID = Guid.NewGuid();

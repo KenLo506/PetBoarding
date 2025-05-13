@@ -31,6 +31,11 @@ namespace WebAppTemplate.Controllers
             if (BookingStartTime >= BookingEndTime) return Content("Error: Booking start time must be BEFORE the end time.");
             if (ActualCheckInTime >= ActualCheckOutTime) return Content("Error: Actual Booking start time must be BEFORE the end time.");
 
+            var overlappingBooking = dbContext.BookingModels.FirstOrDefault(b => b.Pet.PetID == Pet &&
+                         ((BookingStartTime >= b.BookingStartTime && BookingStartTime <= b.BookingEndTime) ||
+                         (BookingEndTime >= b.BookingStartTime && BookingEndTime <= b.BookingEndTime)));
+
+            if (overlappingBooking != null) return Content("Error: The pet already has a booking during this time.");
 
             var petModel = dbContext.PetModels.FirstOrDefault(o => o.PetID == Pet);
             if (petModel == null) return Content("Error: PetID not found in the database.");

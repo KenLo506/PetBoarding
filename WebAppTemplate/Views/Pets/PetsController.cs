@@ -84,6 +84,7 @@ namespace WebAppTemplate.Controllers
 
             if (petModel != null)
             {
+                dbContext.BookingModels.RemoveRange(petModel.Bookings);
                 dbContext.PetModels.Remove(petModel);
                 try
                 {

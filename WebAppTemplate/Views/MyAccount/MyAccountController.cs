@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.Mvc;
 using WebAppTemplate.Models;
 
@@ -41,5 +42,34 @@ namespace WebAppTemplate.Controllers
                 return Content("Error: " + ex.Message);
             }
         }
+<<<<<<< HEAD
+
+        public ActionResult Delete(Guid ID)
+        {
+            ApplicationDbContext dbContext = new ApplicationDbContext();
+
+            var ownerModel = dbContext.PetOwnerModels.Include("Pets").FirstOrDefault(x => x.OwnerID == ID);
+
+            if (ownerModel != null)
+            {
+                dbContext.PetModels.RemoveRange(ownerModel.Pets);
+                dbContext.PetOwnerModels.Remove(ownerModel);
+                try
+                {
+                    dbContext.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    return Content("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                return Content("Owner does not exist");
+            }
+            return Content("Deleted: " + ID);
+        }
+=======
+>>>>>>> 2645e5fb6cda8d6c6b789fe992081506955e7eba
     }
 }

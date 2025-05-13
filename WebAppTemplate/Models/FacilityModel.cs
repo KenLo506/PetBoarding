@@ -19,6 +19,8 @@ namespace WebAppTemplate.Models
 
         public List<BookingModel> Bookings { get; set; }
 
+        public List<EmployeeModel> Employees { get; set; }
+
         public FacilityModel()
         {
             FacilityID = Guid.NewGuid();
