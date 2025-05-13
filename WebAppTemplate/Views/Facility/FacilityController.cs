@@ -1,36 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.DynamicData;
 using System.Web.Mvc;
 using WebAppTemplate.Models;
 
-namespace WebAppTemplate.Controllers
+namespace WebAppTemplate.Views.Facility
 {
-    public class MyAccountController : Controller
+    public class FacilityController : Controller
     {
-        // GET: MyAccount
+        // GET: Facility
         public ActionResult Index()
         {
             return View();
         }
 
-        //MyAccount/Create?Fullname=John&Email=john123@gmail.com&Phone=1234567890&EmergencyContact=0987654321
-        public ActionResult Create(string FullName, string Email, string Phone, string EmergencyContact)
-        {       
+        public ActionResult Create(string FacilityName, string Address, int MaxOccupancy)
+        {
+            if (FacilityName == null) return Content("Facility must have Name");
             ApplicationDbContext dbContext = new ApplicationDbContext();
+            FacilityModel facilityModel = new FacilityModel();
 
-            PetOwnerModel ownerModel = new PetOwnerModel();
+            facilityModel.FacilityName = FacilityName;
+            facilityModel.Address = Address;
+            facilityModel.MaxOccupancy = MaxOccupancy;
 
-            ownerModel.FullName = FullName;
-            ownerModel.Email = Email;
-            ownerModel.Phone = Phone;
-            ownerModel.EmergencyContact = EmergencyContact;
-            
-            dbContext.PetOwnerModels.Add(ownerModel);
+
+            dbContext.FacilityModels.Add(facilityModel);
             try
             {
                 dbContext.SaveChanges();
@@ -47,12 +45,12 @@ namespace WebAppTemplate.Controllers
         {
             ApplicationDbContext dbContext = new ApplicationDbContext();
 
-            var ownerModel = dbContext.PetOwnerModels.Include("Pets").FirstOrDefault(x => x.OwnerID == ID);
+            FacilityModel facilityModel = dbContext.FacilityModels.FirstOrDefault(x => x.FacilityID == ID);
 
-            if (ownerModel != null)
+            if (facilityModel != null)
             {
-                dbContext.PetModels.RemoveRange(ownerModel.Pets);
-                dbContext.PetOwnerModels.Remove(ownerModel);
+                dbContext.EmployeeModels.RemoveRange(facilityModel.Employees);
+                dbContext.FacilityModels.Remove(facilityModel);
                 try
                 {
                     dbContext.SaveChanges();
@@ -64,9 +62,11 @@ namespace WebAppTemplate.Controllers
             }
             else
             {
-                return Content("Owner does not exist");
+                return Content("FacilityID does not exist");
             }
+
             return Content("Deleted: " + ID);
         }
+
     }
 }

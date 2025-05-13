@@ -195,6 +195,8 @@
     <Compile Include="Views\Admin\AdminController.cs" />
     <Compile Include="Views\Bookings\BookingsController.cs" />
     <Compile Include="Views\ContactUs\ContactUsController.cs" />
+    <Compile Include="Views\Employee\EmployeeController.cs" />
+    <Compile Include="Views\Facility\FacilityController.cs" />
     <Compile Include="Views\Hours\HoursController.cs" />
     <Compile Include="Views\MyAccount\MyAccountController.cs" />
     <Compile Include="Views\Pets\PetsController.cs" />
@@ -278,6 +280,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Pets\Index.cshtml" />
     <Content Include="Views\Bookings\Index.cshtml" />
+    <Content Include="Views\Facility\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
