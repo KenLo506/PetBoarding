@@ -180,15 +180,21 @@
     <Compile Include="Migrations\202505070052419_simpleValidations.Designer.cs">
       <DependentUpon>202505070052419_simpleValidations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202505200430061_contactus.cs" />
+    <Compile Include="Migrations\202505200430061_contactus.Designer.cs">
+      <DependentUpon>202505200430061_contactus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BookingModel.cs" />
+    <Compile Include="Models\ContactUsModel.cs" />
     <Compile Include="Models\FacilityModel.cs" />
     <Compile Include="Models\PetModel.cs" />
     <Compile Include="Models\PetOwnerModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="ViewModels\ContactUsSubmissionVM.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -282,6 +288,7 @@
     <Content Include="Views\Bookings\Index.cshtml" />
     <Content Include="Views\Facility\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\ContactUs\ContactUsSuccessful.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -325,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202505070052419_simpleValidations.resx">
       <DependentUpon>202505070052419_simpleValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505200430061_contactus.resx">
+      <DependentUpon>202505200430061_contactus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
