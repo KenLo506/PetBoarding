@@ -42,8 +42,6 @@ namespace WebAppTemplate.Controllers
                 return Content("Error: " + ex.Message);
             }
         }
-<<<<<<< HEAD
-
         public ActionResult Delete(Guid ID)
         {
             ApplicationDbContext dbContext = new ApplicationDbContext();
@@ -69,7 +67,5 @@ namespace WebAppTemplate.Controllers
             }
             return Content("Deleted: " + ID);
         }
-=======
->>>>>>> 2645e5fb6cda8d6c6b789fe992081506955e7eba
     }
 }

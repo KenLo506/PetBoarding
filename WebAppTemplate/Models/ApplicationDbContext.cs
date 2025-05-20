@@ -18,6 +18,7 @@ namespace WebAppTemplate.Models
         public DbSet<BookingModel> BookingModels { get; set; }
         public DbSet<FacilityModel> FacilityModels { get; set; }
         public DbSet<PetOwnerModel> PetOwnerModels { get; set; }
+        public DbSet<ContactUsModel> ContactUsModels { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
