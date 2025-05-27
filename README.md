@@ -1,10 +1,10 @@
 Pet Boarding Management System
-
+---
 Introduction
 This project is a full-stack web application designed to efficiently manage pet bookings, facility operations, and customer interactions for a pet boarding service. Built using ASP.NET MVC, Entity Framework, and a relational database, it supports secure pet and booking management, ensuring referential integrity, cascading deletes, and optimized workflows. The system features structured views, controllers, and validation logic, making it scalable, intuitive, and robust for pet care businesses.
-
+---
 Getting Started
-
+---
 Installation
 Clone the repository:
 
@@ -21,7 +21,7 @@ dotnet ef database update
 
 Run the application locally:
 dotnet run
-
+---
 Software Dependencies
 .NET 6+
 
@@ -32,7 +32,7 @@ Microsoft SQL Server (Relational database)
 Bootstrap/Tailwind (Styling)
 
 Framer Motion (if applicable for UI animations)
-
+---
 Latest Releases
 v1.0 → Initial release with Pet, Booking, and Facility Management
 
