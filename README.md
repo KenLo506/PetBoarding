@@ -8,7 +8,7 @@ Getting Started
 Installation
 Clone the repository:
 
-git clone https://github.com/your-repo/pet-boarding-system.git
+git clone [https://github.com/KenLo506/PetBoarding.git](https://github.com/KenLo506/PetBoarding.git)
 
 Navigate to the project directory:
 cd pet-boarding-system
