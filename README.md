@@ -11,15 +11,19 @@ Clone the repository:
 git clone [https://github.com/KenLo506/PetBoarding.git](https://github.com/KenLo506/PetBoarding.git)
 
 Navigate to the project directory:
+
 cd pet-boarding-system
 
 Install dependencies using NuGet:
+
 dotnet restore
 
 Set up the database:
+
 dotnet ef database update
 
 Run the application locally:
+
 dotnet run
 ---
 Software Dependencies
@@ -31,7 +35,6 @@ Microsoft SQL Server (Relational database)
 
 Bootstrap/Tailwind (Styling)
 
-Framer Motion (if applicable for UI animations)
 ---
 Latest Releases
 v1.0 → Initial release with Pet, Booking, and Facility Management
