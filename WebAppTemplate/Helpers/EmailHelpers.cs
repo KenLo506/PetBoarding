@@ -11,7 +11,7 @@ namespace WebAppTemplate.Helpers
         public static SmtpClient GetSmtpClient()
         {
             SmtpClient smtpClient = new SmtpClient(EmailServiceCredentials.EmailSMTPUrl);
-            smtpClient.Port = int.Parse(EmailServiceCredentials.PortNumber);
+            smtpClient.Port = (EmailServiceCredentials.PortNumber);
             smtpClient.EnableSsl = true;
             smtpClient.Credentials = new NetworkCredential(
                 EmailServiceCredentials.EmailSMTPUserNameHash,

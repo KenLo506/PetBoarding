@@ -286,6 +286,7 @@
     <Content Include="Views\Facility\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\ContactUs\ContactUsSuccessful.cshtml" />
+    <Content Include="Views\Account\RegistrationSuccessful.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
